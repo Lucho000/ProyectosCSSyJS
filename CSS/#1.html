@@ -8,11 +8,22 @@
     
     <style>
         :root{
+            --color0: #00000000;
             --color1: #000c77;
             --color2: #2a60d3;
             --color3: #0b99f8;
+            --color4: #f3f3f3;
+            --color5: #e6e6e6;
+            --color6: #5a5a5a;
+        }
+        html{
+            width: 100%;
+            height: 100%;            
         }
         body{
+            z-index: 0;
+            width: 98%;
+            height: 98%;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -20,19 +31,87 @@
             align-items: center;
         }
         #container{
-            margin: auto;
+            z-index: 1;
             width: 400px;
             height: 400px;
             border-radius: 5px;
             background: linear-gradient(35deg, var(--color1), var(--color2), var(--color3));
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--color4);
+        }
+        #container #cien{
+            padding-right: 2vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #container #cien div{
+            position: relative;
+            background-color: var(--color4);
+        }
+        #container #cien .one-one{
+            z-index: 2;
+            left: 2.1vw;
+            bottom: 2vw;
+            transform: rotateZ(50deg);
+            width: 1.6vw;
+            height: 3vw;
+            border-radius: 3px;
+            background-color: var(--color5);
+        }
+        #container #cien .one-two{
+            z-index: 4;
+            left: 1.8vw;
+            width: 1.9vw;
+            height: 7vw;
+            border-radius: 3px;
+            box-shadow: 5px 0 15px var(--color6);
+        }
+        #container #cien .zero-one, #container #cien .zero-two{
+            z-index: 2;
+            width: 3.7vw;
+            height: 3.7vw;
+            border-radius: 100%;
+            border: 2vw solid var(--color4);
+            background-color: var(--color0);
+            box-shadow: 5px 0 15px var(--color6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container #cien .zero-one{
+            z-index: 3;
+            left: 1.2vw;
+        }
+        #container #span1{
+            font-size: 6vw;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #container #span2{
+            font-size: 2vw;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
         }
     </style>
 
 </head>
 <body>
     <div id="container">
-
+        <div id="cien">
+            <div class="one-one"></div>
+            <div class="one-two"></div>
+            <div class="zero-one"></div>
+            <div class="zero-two"></div>
+        </div>
+        <span id="span1">DAYS</span>
+        <span id="span2">css challenge</span>
     </div>
-
 </body>
 </html>
